@@ -30,11 +30,7 @@ public class Scenario2 {
 			WebElement ele = lst.get(i);
 			String title = ele.getText();
 			System.out.println(title);
-			//System.out.println(lst.get(i).getText());
-			
-		
-			
-			
+						
 		}	
 		
 		driver.close();
