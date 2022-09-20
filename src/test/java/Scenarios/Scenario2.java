@@ -24,10 +24,16 @@ public class Scenario2 {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	  
 		List<WebElement> lst = driver.findElements(By.xpath("//li[contains(text(),'4 GB RAM ')]"));
-		
+		 
 		for(int i=0;i<lst.size();i++)
 		{
-			System.out.println(lst.get(i).getText());
+			WebElement ele = lst.get(i);
+			String title = ele.getText();
+			System.out.println(title);
+			//System.out.println(lst.get(i).getText());
+			
+		
+			
 			
 		}	
 		
