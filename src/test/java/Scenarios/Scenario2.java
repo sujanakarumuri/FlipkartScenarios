@@ -21,8 +21,8 @@ public class Scenario2 {
 		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
 		driver.findElement(By.name("q")).sendKeys("redmi");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		List<WebElement> lst = driver.findElements(By.xpath("//input[contains(Text(),4GB"));
-	    System.out.println(lst);
+		//List<WebElement> lst = driver.findElements(By.xpath("//input[contains(Text(),4GB"));
+	    
 		
 
 	}
