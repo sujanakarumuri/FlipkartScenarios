@@ -1,5 +1,6 @@
 package Scenarios;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -21,10 +22,19 @@ public class Scenario2 {
 		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
 		driver.findElement(By.name("q")).sendKeys("redmi");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		//List<WebElement> lst = driver.findElements(By.xpath("//input[contains(Text(),4GB"));
-	    
+	  
+		List<WebElement> lst = driver.findElements(By.xpath("//li[contains(text(),'4 GB RAM ')]"));
 		
+		for(int i=0;i<lst.size();i++)
+		{
+			System.out.println(lst.get(i).getText());
+			
+		}	
+		
+		driver.close();
 
 	}
+
+	
 
 }
