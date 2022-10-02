@@ -9,7 +9,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Scenario2 {
+/**
+ * Navigate to flipkart, search redmi mobile
+ * capture all the mobiles in the current page whose RAM is 4GB(using xpath)
+ * print in console
+ * @author sujana
+ *
+ */
+public class Scenario2Test {
 
 	public static void main(String[] args) {
 		
@@ -23,13 +30,16 @@ public class Scenario2 {
 		driver.findElement(By.name("q")).sendKeys("redmi");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	  
-		List<WebElement> lst = driver.findElements(By.xpath("//li[contains(text(),'4 GB RAM ')]"));
+		List<WebElement> lst = driver.findElements(By.xpath("//li[contains(text(),'4 GB RAM ')]/../../../div[1]"));
 		 
 		for(int i=0;i<lst.size();i++)
 		{
 			WebElement ele = lst.get(i);
 			String title = ele.getText();
 			System.out.println(title);
+			 
+			//string title=lst.get(i).getText();
+			//System.out.println(title);
 						
 		}	
 		
